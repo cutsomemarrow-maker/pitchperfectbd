@@ -170,7 +170,7 @@
     <img src="images/bayernH.jpg">
     <h3>Bayern Home Kit 26/27</h3>
     <p>৳1000</p>
-    <select id="size2">
+    <select id="size9">
       <option>M</option>
       <option>L</option>
       <option>XL</option>
@@ -186,6 +186,46 @@
     </button>
   </div>
 
+  <div class="product">
+    <img src="images/bayernA.jpg">
+    <h3>Bayern Away Kit 26/27</h3>
+    <p>৳1000</p>
+    <select id="size10">
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+    <div class="qty-box">
+      <button onclick="changeQty('qty10', -1)">-</button>
+      <span id="qty10">1</span>
+      <button onclick="changeQty('qty10', 1)">+</button>
+    </div>
+    <button onclick="addToCart('Bayern Away Kit 26/27', 1000, 'size10', 'qty10')">
+      Add To Cart
+    </button>
+  </div>
+<div class="product">
+    <img src="images/chelseaH.jpg">
+    <h3>Chelsea Home Kit 26/27</h3>
+    <p>৳1000</p>
+    <select id="size11">
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+    <div class="qty-box">
+      <button onclick="changeQty('qty11', -1)">-</button>
+      <span id="qty11">1</span>
+      <button onclick="changeQty('qty11', 1)">+</button>
+    </div>
+    <button onclick="addToCart('Chelsea Home Kit 26/27', 1000, 'size11', 'qty11')">
+      Add To Cart
+    </button>
+  </div>
+
+  
   <!-- To add a new product, just copy one of the .product blocks above,
        give the img/h3/p/select id/qty id/button a new unique number (size5, qty5, etc.)
        and paste it here. It will automatically flow into the grid. -->
