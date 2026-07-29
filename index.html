@@ -150,7 +150,22 @@
       Add To Cart
     </button>
   </div>
-
+<div class="product">
+    <img src="images/BlackSocks.jpg">
+    <h3> BLACK GRIP SOCKS</h3>
+    <p>৳250</p>
+   <select id="size8" style="display:none;">
+  <option value="Free Size">Free Size</option>
+</select>
+    <div class="qty-box">
+      <button onclick="changeQty('qty8', -1)">-</button>
+      <span id="qty8">1</span>
+      <button onclick="changeQty('qty8', 1)">+</button>
+    </div>
+    <button onclick="addToCart(' WHITE GRIP SOCKS', 250,'size8', 'qty8')">
+      Add To Cart
+    </button>
+  </div>
 
 
   <!-- To add a new product, just copy one of the .product blocks above,
