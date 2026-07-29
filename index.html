@@ -224,7 +224,25 @@
       Add To Cart
     </button>
   </div>
-
+<div class="product">
+    <img src="images/manchesterUA.jpg">
+    <h3>Manchester United Away Kit 26/27</h3>
+    <p>৳1000</p>
+    <select id="size12">
+      <option>M</option>
+      <option>L</option>
+      <option>XL</option>
+      <option>XXL</option>
+    </select>
+    <div class="qty-box">
+      <button onclick="changeQty('qty12', -1)">-</button>
+      <span id="qty12">1</span>
+      <button onclick="changeQty('qty12', 1)">+</button>
+    </div>
+    <button onclick="addToCart('Manchester United Away Kit 26/27', 1000, 'size12', 'qty12')">
+      Add To Cart
+    </button>
+  </div>
   
   <!-- To add a new product, just copy one of the .product blocks above,
        give the img/h3/p/select id/qty id/button a new unique number (size5, qty5, etc.)
