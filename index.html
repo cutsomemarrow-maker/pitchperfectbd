@@ -138,13 +138,15 @@
     <img src="images/gripS.jpg">
     <h3> WHITE GRIP SOCKS</h3>
     <p>৳250</p>
-   
+   <select id="size7" style="display:none;">
+  <option value="Free Size">Free Size</option>
+</select>
     <div class="qty-box">
       <button onclick="changeQty('qty7', -1)">-</button>
       <span id="qty7">1</span>
       <button onclick="changeQty('qty7', 1)">+</button>
     </div>
-    <button onclick="addToCart(' WHITE GRIP SOCKS', 250,null, 'qty7')">
+    <button onclick="addToCart(' WHITE GRIP SOCKS', 250,'size7', 'qty7')">
       Add To Cart
     </button>
   </div>
