@@ -4,8 +4,8 @@ function changeQty(id, change){
     let quantity = document.getElementById(id);
     let value = parseInt(quantity.innerHTML);
     value = value + change;
-    if(value < 1){
-        value = 1;
+    if(value < 0){
+        value = 0;
     }
     quantity.innerHTML = value;
 }
@@ -13,12 +13,22 @@ function changeQty(id, change){
 function addToCart(name, price, sizeId, qtyId){
     let size = document.getElementById(sizeId).value;
     let qty = parseInt(document.getElementById(qtyId).innerHTML);
+
+    if(qty < 1){
+        alert("Please select a quantity of at least 1 before adding to cart.");
+        return;
+    }
+
     cart.push({
         name: name,
         price: price,
         size: size,
         qty: qty
     });
+
+    // reset that product's quantity back to 0 after adding
+    document.getElementById(qtyId).innerHTML = 0;
+
     updateCart();
 }
 
@@ -63,6 +73,22 @@ function removeItem(index){
 document.querySelectorAll("input,textarea").forEach(function(element){
     element.addEventListener("input", updateCart);
 });
+
+function searchProducts(){
+    let input = document.getElementById("searchInput").value.toLowerCase().trim();
+    let allProducts = document.querySelectorAll("#productsList .product");
+
+    allProducts.forEach(function(product){
+        let nameElement = product.querySelector("h3");
+        let name = nameElement.textContent.toLowerCase();
+
+        if(name.includes(input)){
+            product.style.display = "flex";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
 
 function orderMessenger(){
     let message = "🛒 New Order - PitchPerfectBD%0A%0A";
