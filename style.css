@@ -7,7 +7,6 @@ body{
     background:#ffffff;
     color:#111;
 }
-
 /* HEADER */
 .header{
     text-align:center;
@@ -27,6 +26,33 @@ body{
 .header p{
     color:#666;
     font-size:18px;
+}
+
+/* SEARCH BAR */
+.search-bar{
+    width:90%;
+    max-width:500px;
+    margin:0 auto;
+    padding:0 20px;
+    text-align:center;
+}
+.search-bar input{
+    width:100%;
+    padding:14px 18px;
+    border-radius:30px;
+    border:2px solid #ddd;
+    font-size:16px;
+    outline:none;
+}
+.search-bar input:focus{
+    border-color:#0084ff;
+}
+.search-note{
+    color:red;
+    font-weight:bold;
+    font-size:14px;
+    margin-top:12px;
+    margin-bottom:0;
 }
 
 /* PRODUCTS GRID
@@ -49,6 +75,7 @@ body{
     transition:0.3s;
     display:flex;
     flex-direction:column;
+    justify-content:space-between;
 }
 .product:hover{
     transform:translateY(-5px);
@@ -69,12 +96,6 @@ body{
     font-size:22px;
     font-weight:bold;
     color:#0084ff;
-}
-
-/* Push the Add To Cart button to the bottom so all cards line up evenly
-   even if a title takes two lines */
-.product{
-    justify-content:space-between;
 }
 
 /* INPUTS */
